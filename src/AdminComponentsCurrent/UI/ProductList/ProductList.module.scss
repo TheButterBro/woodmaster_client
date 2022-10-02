@@ -1,0 +1,56 @@
+.productlist {
+    // margin-top: 20px;
+    .wrapper {
+        .header {
+            width: 100%;
+            display: flex;
+            background-color: rgba($color: #000000, $alpha: .15);
+            .id {
+                width: 5%;
+                
+                padding: 10px 10px;
+            }
+            .img {
+                width: 15%;
+                
+                padding: 10px 10px;
+            }
+            .name {
+                width: 20%;
+                
+                padding: 10px 10px;
+            }
+            .description {
+                flex: 1;
+                
+                padding: 10px 10px;
+            }
+            .category {
+                width: 5%;
+                
+                padding: 10px 10px;
+            }
+            .style {
+                width: 5%;
+                
+                padding: 10px 10px;
+            }
+            .price {
+                width: 8%;
+                
+                padding: 10px 10px;
+            }
+            .action {
+                width: 15%;
+                
+                padding: 10px 10px;
+            }
+        }
+        .body {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba($color: #000000, $alpha: .35);
+        }
+    }
+}

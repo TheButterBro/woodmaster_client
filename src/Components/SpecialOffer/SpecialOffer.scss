@@ -1,0 +1,17 @@
+
+.swiperOffer {
+    .swiper-pagination {
+        margin-top: 15px;
+        position: static !important;
+        .swiper-pagination-bullet {
+          background: white;
+          height: 12px;
+          width: 12px;
+        }
+        .swiper-pagination-bullet-active {
+          background: white;
+          height: 15px;
+          width: 15px;
+        }
+      }
+  }

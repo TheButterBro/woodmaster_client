@@ -1,0 +1,126 @@
+.product {
+    position: relative;
+    .container {
+        padding: 45px 60px 60px 60px;
+        a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 16px;
+            margin-bottom: 20px;
+            display: inline-block;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .wrapper {
+            margin-top: 15px;
+            display: flex;
+            // align-items: center;
+            .content {
+                width: 50%;
+                padding: 0px 0px 0px 40px;
+                display: flex;
+                flex-direction: column;
+                // justify-content: space-between;
+                .text {
+                    width: 100%;
+                    .title {
+                        max-width: 70%;
+                        font-size: 40px;
+                        font-weight: 400;
+                    }
+                    .subtitle {
+                        font-size: 18px;
+                        color: rgba($color: #000000, $alpha: .8);
+                        // text-transform: uppercase;
+                    }
+                    .params {
+                        max-width: 70%;
+                        strong {
+                            margin-right: 10px;
+                            font-size: 20px;
+                        }
+                        margin-bottom: 20px;
+                        font-size: 18px;
+                    }
+                    .description {
+                        max-width: 70%;
+                        margin-top: 30px;
+                        margin-bottom: 20px;
+                        font-size: 18px;
+                        // background: lightgray;
+                        width: 100%;
+
+                        
+                        .descRow {
+                            display: flex;
+                            
+                            padding: 5px 10px;
+                            .descTitle {
+                                margin-right: 10px;
+                            }
+                            .descText {}
+                        }
+                    }
+                    .row {
+                        max-width: 70%;
+                        display: flex;
+                        padding-top: 20px;
+                        margin-bottom: 0px;
+                        .price {
+                            margin-right: 40px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            b {
+                                font-size: 18px;
+                                text-transform: uppercase;
+                                color: rgba($color: #000000, $alpha: .5);
+                            }
+                            p {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+                
+                .order {
+                    // flex: 1;
+                    margin-top: 30px;
+                    // display: flex;
+                    align-items: center;
+                    button {
+                        cursor: pointer;
+                        background: #38af48;
+                        color: #fff;
+                        border: none;
+                        outline: none;
+                        font-size: 20px;
+                        padding: 15px 20px;
+                        
+                    }
+                    p {
+                        color: rgba($color: #000000, $alpha: .8);
+                        margin-top: 5px;
+                        font-size: 14px;
+                        // max-width: 250px;
+                    }
+                }
+            }
+            .img {
+                width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-height: 700px;
+                overflow: hidden;
+                img {
+                    max-height: 100%;
+                    max-width: 100%;
+                }
+            
+            }
+        }
+    }
+    
+}

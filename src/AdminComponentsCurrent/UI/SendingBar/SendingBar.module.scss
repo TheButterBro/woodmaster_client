@@ -1,0 +1,39 @@
+.wrapper {
+    .body {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            width: 50px;
+            height: 50px;
+            margin: 1em;
+            .bg {
+                fill: none;
+                stroke-width: 7px;
+                stroke: #424242;
+            }           
+            .meter1 {
+                fill: none;
+                
+                stroke-linecap: round;
+                transform: rotate(-90deg);
+                transform-origin: 50% 50%;
+                stroke-width: 7px;
+                stroke-dasharray: 360;
+                stroke-dashoffset: 0;
+                stroke: #46af48;
+                animation: progress1 2.8s ease-out;
+            }
+        }
+    }
+}
+
+@keyframes progress1 {
+    from {
+        stroke-dashoffset: 360;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}

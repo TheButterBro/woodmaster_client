@@ -1,0 +1,124 @@
+.navButton, .navButtonHidden {
+    position: fixed;
+    top: 60px;
+    left: 60px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: #38af48;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    -webkit-border-radius: 250px;
+    -moz-border-radius: 250px;
+
+    cursor: pointer;
+    z-index: 10;
+    .lines {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .line {
+            position: absolute;
+            min-width: 26px;
+            min-height: 3px;
+
+            background: #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            &::after {
+                content: '';
+                position: absolute;
+                min-width: 26px;
+                min-height: 3px;
+
+                background: #fff;
+                top: 6px;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                min-width: 26px;
+                min-height: 3px;
+
+                background: #fff;
+                top: -6px;
+            }
+        }
+    }
+}
+.wrapper {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    min-height: 681px;
+    .information {
+        // width: 50%;
+        padding: 155px 0px 0px 60px;
+
+        .logo {
+            font-size: 26px;
+            font-weight: 500;
+            margin-bottom: 80px;
+            overflow-wrap: break-word;
+        }
+        .who {
+            font-size: 42px;
+            font-weight: 700;
+            overflow-wrap: break-word;
+        }
+        .splitter {
+            content: '';
+            width: 70px;
+            height: 5px;
+            background: #38af48;
+            border-radius: 15px;
+            margin: 20px 0 15px 0;
+        }
+        .slogan {
+            font-size: 20px;
+            overflow-wrap: break-word;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .contacts {
+            margin-top: 88px;
+            .phones {
+          
+                a {
+                    position: relative;
+                    font-size: 22px;
+                    font-weight: 500;
+                    display: block;
+                    color: black;
+                    text-decoration: none;
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
+                        &::before {
+                            content: '';
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50px;
+                            background: #38af48;
+
+                            position: absolute;
+                            top: 50%;
+                            transform: translate(0, -50%);
+                            left: 200px;
+                            z-index: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .image {
+        width: 50%;
+    }
+}
+.navButtonHidden {
+    z-index: 0 !important;
+}

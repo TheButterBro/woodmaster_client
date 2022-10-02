@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.body {
+  height: 1200px;
+  background-color: black;
+}
+.scrollHidden {
+  
+  overflow: hidden !important;
+  padding-right: 17px;
+}
+.scrollHiddenNoPadding {
+  
+  overflow: hidden !important;
+
+}
+.App {
+  max-width: 1920px;
+  margin: 0 auto;
+  box-shadow: 0 0 40px 5px rgba(0, 0, 0, 0.315);
+}
+// SWIPER 
+// .swiper-button-prev {
+//   background: white;
+//   min-height: 50px;
+//   min-width: 50px;
+//   border-radius: 50px;
+//   position: absolute;
+//   transform: translate(0, -50%);
+//   left: 0px !important;
+//   &::after {
+//     content: "←" !important;
+//     color: #38af48;
+//     padding-bottom: 10px;    
+//   }
+// }
+// .swiper-button-next {
+//   background: white;
+//   min-height: 50px;
+//   min-width: 50px;
+//   border-radius: 50px;
+//   position: absolute;
+//   transform: translate(0, -50%);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   right: 0 !important;
+
+//   &::after {
+//     content: "→" !important;
+//     color: #38af48;
+//     padding-bottom: 10px;
+//   }
+// }
+img {
+  pointer-events: none;
+}
+
+// * {
+//   outline: 1px solid red !important;
+// }

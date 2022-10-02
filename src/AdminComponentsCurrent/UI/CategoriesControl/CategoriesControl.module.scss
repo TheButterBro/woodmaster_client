@@ -1,0 +1,16 @@
+.categoriescontrol {
+    margin-bottom: 20px;
+    .wrapper {
+        border: 1px solid #46af48;
+        .title {
+            background: #46af48;
+            font-size: 20px;
+            color: #fff;
+            padding: 10px 10px;
+        }
+        .body {
+            padding: 10px;
+            background: rgba(70, 175, 72, 0.25);
+        }
+    }
+}

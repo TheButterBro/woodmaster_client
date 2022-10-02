@@ -1,0 +1,80 @@
+.callform {
+    background: url(../../../public/images/d/6.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    .wrapper {
+        padding: 50px 60px;
+        display: flex;
+        background: linear-gradient(rgba(56, 175, 72, 0.94), rgba(56, 175, 72, 0.94));
+        .text {
+            min-width: 650px;
+            .title{
+                font-size: 60px;
+                color: #fff;
+                line-height: 1.1;
+                font-weight: 700;
+            }
+            .subtitle {
+                color: rgba(255, 255, 255, 0.6);
+                font-size: 20px;
+                margin-top: 3px;
+            }
+        }
+        .body {
+            margin-top: 30px;
+            padding-left: 30px;
+            form {
+
+                input {
+                    margin-right: 10px;
+                    padding: 2px 4px 2px 20px;
+                    border: none;
+                    box-sizing: border-box;
+                    background: #ffffff;
+                    width: 207px;
+                    min-width: 100px;
+                    min-height: 40px;
+                    outline: none;
+                    -webkit-appearance: none;
+                    font-family: Roboto, sans-serif;
+                    color: #000000;
+                    line-height: 1.2;
+                    letter-spacing: 0;
+                    text-align: start;
+                    text-transform: none;
+                    text-decoration: none;
+                    font-size: 14px;
+                    height: 40px;
+                    -webkit-border-radius: 250px;
+                    -moz-border-radius: 250px;
+                    border-radius: 250px;
+                    &::placeholder {
+                        color: rgba($color: #000000, $alpha: .4);
+                    }
+                }
+                button {
+                    cursor: pointer;
+                    width: 160px;
+                    height: 40px;
+                    border: none;
+                    outline: none;
+                    background: black;
+                    color: #fff;
+                    border-radius: 250px;
+                }
+            }
+            .contract {
+                margin-top: 25px;
+                p {
+                    color: #fff;
+                    display: inline;
+                }
+                a {
+                    color: #ffffff;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

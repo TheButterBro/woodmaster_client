@@ -1,0 +1,386 @@
+
+.createproduct {
+    border-left: 1px solid #46af48;
+    border-right: 1px solid #46af48;
+    margin-bottom: 20px;
+    .wrapper {
+        .title {
+            background: #46af48;
+            color: #fff;
+
+            // border-radius: 4px 4px 0 0;
+
+            padding: 10px 10px;
+            font-size: 20px;
+            font-weight: 500;
+
+        }
+        .body {
+            border-radius: 4px;
+            top: 50%;
+            left: 50%;
+
+            background: #46af4838;
+            width: 100%;
+            display: flex;
+            .form {
+                width: 50%;
+                border-top: 1px solid #46af48;
+                border-bottom: 1px solid #46af48;
+                padding: 20px 30px;
+                .title {
+                    margin-bottom: 10px;
+                }
+                .name, .price, .category, .style, .image, .description {
+                    margin-bottom: 15px;
+                    p {
+                        font-size: 14px;
+                        padding: 0;
+                        margin-bottom: 5px;
+    
+                        position: relative;
+                        &::before {
+                            position: absolute;
+                            top: 5px;
+                            left: -12px;
+                            content: '';
+                            height: 7px;
+                            width: 7px;
+                            border-radius: 50%;
+    
+                            background: #46af48;
+                        }
+                    }
+                    input {
+                        width: 100%;
+                        height: 40px;
+                        padding: 3px 7px;
+                        border: 1px solid #46af48;
+                        outline: none;
+                        border-radius: 4px;
+                    }
+                    select {
+                        cursor: pointer;
+                        width: 100%;
+                        height: 40px;
+                        padding: 3px 7px;
+                        border: 1px solid #46af48;
+                        outline: none;
+                        border-radius: 4px;
+                        option {
+                            cursor: pointer;
+                        }
+                    }
+                    button {
+                        padding: 10px 7px;
+                        cursor: pointer;
+    
+                        background: #46af48;
+                        color: #fff;
+                        border-radius: 4px;
+                        border: none;
+                        outline: none;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .image {
+                    input {
+                        width: fit-content;
+                        height: fit-content;
+                        padding: 10px 10px 10px 30px;
+                        border: 1px solid #46af48;
+                        outline: none;
+                        border-radius: 4px;
+                    }
+                }
+                .description {
+
+                    p {
+                        margin-top: 10px;
+                        &::before {
+                            display: none;
+                        }
+                    }
+                    textarea {
+                        min-width: 100%;
+                        max-width: 100%;
+                        min-height: 80px;
+                        padding: 3px 7px;
+                        border: 1px solid #46af48;
+                        outline: none;
+                        border-radius: 4px;
+                    }
+                    .descriptionList {
+                        border: 1px dashed grey;
+                        background-color: rgba(128, 128, 128, 0.247);
+                        border-radius: 4px;
+                        padding: 10px;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 10px;
+                        
+                        width: 100%;
+                        .descriptionButton {
+                            margin: 0;
+                            margin-right: 15px;
+                            padding: 0px;
+
+                            min-width: 30px;
+                            height: 30px;
+                            background: rgba($color: red, $alpha: .5);
+                            border: 1px solid red;
+                            &:hover {
+                                background: rgba($color: red, $alpha: .8);;
+                            }
+                        }
+                        .descriptionParag {
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            margin: 0;
+                            width: 100%;
+                            
+                        }
+                    }
+                }
+            }
+            
+            
+        }
+        .buttons {
+            background: rgba($color: #46af48, $alpha: .25);
+            display: flex;
+            justify-content: flex-end;
+            border-bottom: 1px solid #46af48;
+            .submit {
+                display: flex;
+                justify-content: center;
+                padding: 10px 20px;
+                button {
+                    font-size: 16px;
+                    min-width: 160px;
+                    min-height: 50px;
+                    padding: 10px 7px;
+                    cursor: pointer;
+                    width: 100%;
+                    background: #46af48;
+                    color: #fff;
+                    border-radius: 4px;
+                    border: none;
+                    outline: none;
+                }
+            }
+            .cancel {
+                display: flex;
+                justify-content: center;
+                padding: 10px 20px;
+                button {
+                    font-size: 16px;
+                    min-width: 160px;
+                    min-height: 50px;
+                    padding: 10px 7px;
+                    cursor: pointer;
+                    width: 100%;
+                    background: red;
+                    color: #fff;
+                    border-radius: 4px;
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+.error {
+    p {
+        &::before {
+            background: red !important;
+        }
+    }
+}
+
+
+
+// .createproduct {
+//     .wrapper {
+//         z-index: 15;
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         height: 100%;
+//         width: 100%;
+//         background: rgba($color: #000000, $alpha: .4);
+//         .body {
+//             border-radius: 4px;
+//             position: absolute;
+//             top: 50%;
+//             left: 50%;
+//             transform: translate(-50%,-50%);
+
+//             background: #fff;
+//             width: 300px;
+//             // padding: 10px 30px;
+
+//             .title {
+//                 background: #46af48;
+//                 color: #fff;
+
+//                 border-radius: 4px 4px 0 0;
+
+//                 padding: 5px 10px;
+//                 font-size: 20px;
+//                 font-weight: 500;
+
+//             }
+//             .form {
+//                 border-top: 1px solid #46af48;
+//                 border-bottom: 1px solid #46af48;
+//                 padding: 20px 30px;
+//                 .name, .price, .category, .style, .image, .description {
+//                     margin-bottom: 15px;
+//                     p {
+//                         font-size: 14px;
+//                         padding: 0;
+//                         margin-bottom: 5px;
+    
+//                         position: relative;
+//                         &::before {
+//                             position: absolute;
+//                             top: 5px;
+//                             left: -12px;
+//                             content: '';
+//                             height: 7px;
+//                             width: 7px;
+//                             border-radius: 50%;
+    
+//                             background: #46af48;
+//                         }
+//                     }
+//                     input {
+//                         width: 100%;
+//                         height: 25px;
+//                         padding: 3px 7px;
+//                         border: 1px solid #46af48;
+//                         outline: none;
+//                         border-radius: 4px;
+//                     }
+//                     select {
+//                         width: 100%;
+//                         height: 25px;
+//                         padding: 3px 7px;
+//                         border: 1px solid #46af48;
+//                         outline: none;
+//                         border-radius: 4px;
+//                         option {
+    
+//                         }
+//                     }
+//                     button {
+//                         padding: 10px 7px;
+//                         cursor: pointer;
+    
+//                         background: #46af48;
+//                         color: #fff;
+//                         border-radius: 4px;
+//                         border: none;
+//                         outline: none;
+//                         margin-top: 10px;
+//                         margin-bottom: 10px;
+//                     }
+//                 }
+
+//                 .image {
+//                     input {
+//                         width: 100%;
+//                         height: fit-content;
+//                         padding: 0px 0px;
+//                         border: 1px solid #46af48;
+//                         outline: none;
+//                         border-radius: 4px;
+//                     }
+//                 }
+//                 .description {
+
+//                     p {
+//                         margin-top: 10px;
+//                         &::before {
+//                             display: none;
+//                         }
+//                     }
+//                     textarea {
+//                         min-width: 100%;
+//                         max-width: 100%;
+//                         min-height: 80px;
+//                         padding: 3px 7px;
+//                         border: 1px solid #46af48;
+//                         outline: none;
+//                         border-radius: 4px;
+//                     }
+//                     .descriptionList {
+//                         display: flex;
+//                         margin-bottom: 10px;
+                        
+//                         width: 100%;
+//                         .descriptionButton {
+//                             margin: 0;
+//                             margin-right: 5px;
+//                             padding: 0px;
+//                             height: 20px;
+//                             min-width: 20px;
+//                             &:hover {
+//                                 background: red;
+//                             }
+//                         }
+//                         .descriptionParag {
+//                             text-overflow: ellipsis;
+//                             overflow: hidden;
+//                             white-space: nowrap;
+//                             margin: 0;
+//                             height: 20px;
+//                             width: 100%;
+                            
+//                         }
+//                     }
+//                 }
+//             }
+//             .submit {
+//                 display: flex;
+//                 justify-content: center;
+//                 padding: 10px 20px;
+//                 button {
+//                     padding: 10px 7px;
+//                     cursor: pointer;
+//                     width: 100%;
+//                     background: #46af48;
+//                     color: #fff;
+//                     border-radius: 4px;
+//                     border: none;
+//                     outline: none;
+//                 }
+//             }
+//         }
+//     }
+// }
+// .error {
+//     p {
+//         &::before {
+//             background: red !important;
+//         }
+//     }
+// }
+// .cancel {
+//     cursor: pointer;
+//     background-color: rgba(255, 0, 0, 0.603);
+//     border-radius: 0 0 4px 4px;
+//     padding: 5px 0;
+//     p {
+//         text-align: center;
+//     }
+//     &:hover {
+//         p {
+//             text-decoration: underline;
+//         }
+//     }
+// }

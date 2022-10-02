@@ -1,0 +1,22 @@
+
+ .likeProduct {
+    .swiper {
+        position: relative;
+        .swiper-pagination {   
+            margin-top: 30px; 
+            position: static;
+            .swiper-pagination-bullet {
+                background: green;
+                height: 12px;
+                width: 12px;
+            }
+            .swiper-pagination-bullet-active {
+                background: green;
+                height: 15px;
+                width: 15px;
+            }
+        }
+    }
+    
+ }
+

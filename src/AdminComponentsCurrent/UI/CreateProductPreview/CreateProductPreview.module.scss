@@ -1,0 +1,148 @@
+.header {
+    width: 100%;
+    display: flex;
+    background-color: rgba($color: #46af48, $alpha: .25);
+    .id {
+        width: 5%;
+        
+        padding: 10px 10px;
+    }
+    .img {
+        width: 15%;
+        
+        padding: 10px 10px;
+    }
+    .name {
+        width: 20%;
+        
+        padding: 10px 10px;
+    }
+    .description {
+        flex: 1;
+        
+        padding: 10px 10px;
+    }
+    .category {
+        width: 5%;
+        
+        padding: 10px 10px;
+    }
+    .style {
+        width: 5%;
+        
+        padding: 10px 10px;
+    }
+    .price {
+        width: 8%;
+        
+        padding: 10px 10px;
+    }
+    .action {
+        width: 15%;
+        
+        padding: 10px 10px;
+    }
+}
+.item {
+    width: 100%;
+    .wrapper {
+        display: flex;
+        .id {
+            width: 5%;
+            border: 1px solid rgba($color: #000000, $alpha: .15);
+            
+            padding: 10px 10px;
+            padding-top: 20px;
+        }
+        .img {
+            width: 15%;
+            border: 1px solid rgba($color: #000000, $alpha: .15);
+            
+            padding: 10px 10px;
+            padding-top: 20px;
+            p {
+                .previewImg {
+                    margin-top: -10px;
+                    height: 200px;
+                    width: 100%;
+                    border-radius: 4px;
+                    background: lightgrey;
+
+                    padding: 20px;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    p {
+                        
+                    }
+                }
+            }
+        }
+        .name {
+            width: 20%;
+            border: 1px solid rgba($color: #000000, $alpha: .15);
+            
+            padding: 10px 10px;
+            padding-top: 20px;
+        }
+        .description {
+            flex: 1;
+            border: 1px solid rgba($color: #000000, $alpha: .15);
+            
+            padding: 10px 10px;
+            padding-top: 20px;
+            list-style: none;
+            li {
+                margin-bottom: 3px;
+            }
+        }
+        .category {
+            width: 5%;
+            border: 1px solid rgba($color: #000000, $alpha: .15);
+            
+            padding: 10px 10px;
+            padding-top: 20px;
+        }
+        .style {
+            width: 5%;
+            border: 1px solid rgba($color: #000000, $alpha: .15);
+            
+            padding: 10px 10px;
+            padding-top: 20px;
+        }
+        .price {
+            width: 8%;
+            border: 1px solid rgba($color: #000000, $alpha: .15);
+            
+            padding: 10px 10px;
+            padding-top: 20px;
+        }
+        .action {
+            width: 15%;
+            border: 1px solid rgba($color: #000000, $alpha: .15);
+            
+            padding: 10px 10px;
+            padding-top: 20px;
+            .buttons {
+                width: fit-content;
+                margin: 0 auto;
+                .change {
+                    cursor: pointer;
+                    margin-right: 15px;
+                    background: rgba($color: blue, $alpha: .3);
+                    &:hover {
+                        background: rgba($color: blue, $alpha: .6);
+                    }
+                }
+                .delete {
+                    cursor: pointer;
+                    background: rgba($color: red, $alpha: .3);
+                    &:hover {
+                        background: rgba($color: red, $alpha: .6);
+                    }
+                }
+            }
+        }
+    } 
+}

@@ -1,0 +1,100 @@
+.aboutUs {
+    background-color: #1a1a1a;
+    .wrapper {
+        display: flex;
+        height: 100%;
+        // padding: 10px 0;
+        .content {
+            flex: 1;
+            background-color: #fff;
+            padding: 60px 30px 60px 60px;
+            max-width: 60%;
+            transition: all .3s ease-in-out;
+            h3 {
+                font-size: 30px;
+                font-weight: bold;
+                margin-bottom: 25px;
+            }
+            .text {
+                padding: 0px 24px;
+                strong {
+                    font-weight: 700;
+                    line-height: 1.5;
+                    font-size: 20px;
+
+                }
+                img {
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+                p {
+                    line-height: 1.5;
+                    font-size: 20px;
+                    font-weight: 400;
+                    margin-bottom: 30px;
+                }
+                ul {
+                    padding-left: 40px;
+                    padding-top: 30px;
+                    margin-bottom: 30px;
+                    li {
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .images, .imagesActive {
+            width: fit-content;
+            max-width: 40%;
+            position: sticky;
+            top: 0;
+            transition: all .3s ease-in-out;
+            // transform: translate(0, -50%);
+            // margin: auto;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1a1a1a;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                // max-width: none;
+                // transform: translate(-70px);
+            }
+            .back {
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                height: 100vh;
+                width: 60px;
+                background: rgba($color: #000000, $alpha: .2);
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50px;
+                    padding: 7px;
+                    transition: all .3s ease-in-out;
+                    transform: rotate(-90deg);
+                    background: #fff;
+                    display: inline;
+                }
+                .rotate {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        .imagesActive {
+            max-width: 80%;
+        }
+    }
+}
