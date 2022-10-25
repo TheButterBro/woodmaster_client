@@ -13,12 +13,6 @@ function Agreement() {
     setIsOpened(!isOpened);
   };
 
-  const handleCreatePass = () => {
-    let formData = new FormData();
-
-    formData.append('password', 'URAauNJWOZ');
-    createPermission(formData);
-  };
   return (
     <>
       <Header />
@@ -53,7 +47,6 @@ function Agreement() {
             <img src="/images/aboutUsRight_img.jpg" alt="" />
           </div>
         </div>
-        <button onClick={handleCreatePass}>Создать</button>
       </section>
       <Footer />
     </>
