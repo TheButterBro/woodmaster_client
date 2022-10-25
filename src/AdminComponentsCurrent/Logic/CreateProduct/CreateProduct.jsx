@@ -80,7 +80,9 @@ function CreateProduct({ handleCloseCreateProd }) {
       formData.append('name', thisName);
       formData.append('price', `${thisPrice}`);
       formData.append('img', file);
-      formData.append('description', JSON.stringify(thisDescription));
+      if (thisDescription.length) {
+        formData.append('description', JSON.stringify(thisDescription));
+      }
 
       createProduct(formData)
         .then((data) => handleCloseCreateProd())
@@ -106,7 +108,9 @@ function CreateProduct({ handleCloseCreateProd }) {
                   id=""
                   className={styles.select}>
                   {categories.map((elem) => (
-                    <option value={elem.id}>{elem.title}</option>
+                    <option key={`option category create ${elem.id}`} value={elem.id}>
+                      {elem.title}
+                    </option>
                   ))}
                 </select>
               </div>
@@ -120,7 +124,9 @@ function CreateProduct({ handleCloseCreateProd }) {
                   className={styles.select}>
                   {[...categories.filter((item) => item.id == thisCategory)][0].styles.map(
                     (elem, index) => (
-                      <option value={index + 1}>{elem.title}</option>
+                      <option key={`option style create ${elem.id}`} value={index + 1}>
+                        {elem.title}
+                      </option>
                     ),
                   )}
                 </select>
@@ -146,7 +152,7 @@ function CreateProduct({ handleCloseCreateProd }) {
               <p className={styles.title}>Характеристики (Опционально):</p>
               <div className={styles.description}>
                 {thisDescription.map((item, index) => (
-                  <ul className={styles.descriptionList}>
+                  <ul key={`description create prod ${item.id}`} className={styles.descriptionList}>
                     <button
                       onClick={() => handleDeleteDescription(index)}
                       className={styles.descriptionButton}>

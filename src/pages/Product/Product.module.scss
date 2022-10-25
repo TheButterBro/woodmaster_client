@@ -65,6 +65,7 @@
                     .row {
                         max-width: 70%;
                         display: flex;
+                        flex-direction: column;
                         padding-top: 20px;
                         margin-bottom: 0px;
                         .price {
@@ -81,31 +82,32 @@
                                 font-size: 20px;
                             }
                         }
+                        .order {
+                            // flex: 1;
+                            margin-top: 30px;
+                            // display: flex;
+                            align-items: center;
+                            button {
+                                cursor: pointer;
+                                background: #38af48;
+                                color: #fff;
+                                border: none;
+                                outline: none;
+                                font-size: 20px;
+                                padding: 15px 20px;
+                                
+                            }
+                            p {
+                                color: rgba($color: #000000, $alpha: .8);
+                                margin-top: 5px;
+                                font-size: 14px;
+                                // max-width: 250px;
+                            }
+                        }
                     }
                 }
                 
-                .order {
-                    // flex: 1;
-                    margin-top: 30px;
-                    // display: flex;
-                    align-items: center;
-                    button {
-                        cursor: pointer;
-                        background: #38af48;
-                        color: #fff;
-                        border: none;
-                        outline: none;
-                        font-size: 20px;
-                        padding: 15px 20px;
-                        
-                    }
-                    p {
-                        color: rgba($color: #000000, $alpha: .8);
-                        margin-top: 5px;
-                        font-size: 14px;
-                        // max-width: 250px;
-                    }
-                }
+                
             }
             .img {
                 width: 50%;
@@ -123,4 +125,253 @@
         }
     }
     
+}
+
+@media screen and (max-width: 1025px) {
+    .product {
+        .container {
+            padding-bottom: 0;
+            a {
+                &:hover {
+                }
+            }
+            .wrapper {
+                flex-direction: column;
+                .content {
+                    padding: 10px 0 0 0;
+                    width: 100%;
+                    .text {
+                        .titles {
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            justify-content: space-between;
+                            
+                            .title {
+                                border-bottom: 2px solid #46af48;
+                            }
+                            .subtitle {
+                                margin-top: 5px;
+                                border: 1px dashed grey;
+                                border-radius: 8px;
+                                padding: 5px 10px;
+
+                            }
+                        }
+
+                        .params {
+                            strong {
+                            }
+                        }
+                        .description {
+                            border-bottom: 2px solid #46af48;
+                            max-width: 100%;
+                            .descRow {
+
+                                .descTitle {
+                                }
+                                .descText {}
+                            }
+                        }
+                        .row {
+                            flex-direction: row;
+                            justify-content: flex-end;
+                            max-width: 100%;
+                            .price {
+                                b {
+                                }
+                                p {
+                                }
+                            }
+                            .order {
+                                margin-top: 0;
+                                button {
+                                }
+                                p {
+                                }
+                            }
+                        }
+                    }
+                    
+                    
+                }
+                .img {
+                    width: 100%;
+                    img {
+
+                    }
+                }
+            }
+        }       
+    }
+}
+
+@media screen and (max-width: 579px) {
+    .product {
+        .container {
+            padding: 30px 30px 0 30px;
+            a {
+                &:hover {
+                }
+            }
+            .wrapper {
+                flex-direction: column;
+                .content {
+                    padding: 10px 0 0 0;
+                    width: 100%;
+                    .text {
+                        .titles {
+                            column-gap: 10px;
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            justify-content: space-between;
+                            
+                            .title {
+                                font-size: 32px;
+                                border-bottom: 2px solid #46af48;
+                            }
+                            .subtitle {
+                                font-size: 16px;
+                                margin-top: 5px;
+                                border: 1px dashed grey;
+                                border-radius: 8px;
+                                padding: 5px 10px;
+
+                            }
+                        }
+
+                        .params {
+                            strong {
+                            }
+                        }
+                        .description {
+                            border-bottom: 2px solid #46af48;
+                            max-width: 100%;
+                            .descRow {
+                                font-size: 16px;
+                                .descTitle {
+                                }
+                                .descText {}
+                            }
+                        }
+                        .row {
+                            flex-direction: row;
+                            justify-content: flex-end;
+                            max-width: 100%;
+                            .price {
+                                b {
+                                    font-size: 16px;
+                                }
+                                p {
+                                    font-size: 16px;
+                                }
+                            }
+                            .order {
+                                margin-top: 0;
+                                button {
+                                    font-size: 16px;
+                                }
+                                p {
+                                }
+                            }
+                        }
+                    }
+                    
+                    
+                }
+                .img {
+                    width: 100%;
+                    img {
+
+                    }
+                }
+            }
+        }       
+    }
+}
+
+@media screen and (max-width: 341px) {
+    .product {
+        .container {
+            padding: 30px 30px 0 30px;
+            a {
+                &:hover {
+                }
+            }
+            .wrapper {
+                flex-direction: column;
+                .content {
+                    padding: 10px 0 0 0;
+                    width: 100%;
+                    .text {
+                        .titles {
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            justify-content: space-between;
+                            
+                            .title {
+                                font-size: 32px;
+                                border-bottom: 2px solid #46af48;
+                            }
+                            .subtitle {
+                                font-size: 14px;
+                                margin-top: 5px;
+                                border: 1px dashed grey;
+                                border-radius: 8px;
+                                padding: 5px 10px;
+
+                            }
+                        }
+
+                        .params {
+                            strong {
+                            }
+                        }
+                        .description {
+                            border-bottom: 2px solid #46af48;
+                            max-width: 100%;
+                            .descRow {
+                                font-size: 14px;
+                                .descTitle {
+                                }
+                                .descText {}
+                            }
+                        }
+                        .row {
+                            flex-direction: row;
+                            justify-content: flex-end;
+                            max-width: 100%;
+                            .price {
+                                b {
+                                    font-size: 14px;
+                                }
+                                p {
+                                    font-size: 14px;
+                                }
+                            }
+                            .order {
+                                margin-top: 0;
+                                button {
+                                    font-size: 14px;
+                                    padding: 10px 10px;
+                                }
+                                p {
+                                }
+                            }
+                        }
+                    }
+                    
+                    
+                }
+                .img {
+                    width: 100%;
+                    img {
+
+                    }
+                }
+            }
+        }       
+    }
 }

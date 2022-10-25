@@ -51,7 +51,23 @@
                     height: 100%;
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
+                    align-items: flex-start;
+                    justify-content: center;
+                    button {
+                        background: transparent;
+                        border: none;
+                        padding: 0;
+                        text-align: start;
+                        font-size: 16px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        color: rgba($color: #000000, $alpha: .5);
+                        max-width: 50%;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
                     b {
                         
                         font-size: 20px;
@@ -81,4 +97,125 @@
                 }
             }       
         }
+}
+
+@media screen and (max-width: 980px) {
+    .bodyItem {
+        border: 3px solid #46af48;
+        transition: all .2s ease-in-out;
+        // width: 22%;
+        width: 100%;
+        height: fit-content;
+
+        // border: 1px solid black;
+        // border-radius: 20px;
+        overflow: hidden;
+        // width: 380px;
+        // margin-bottom: 30px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px 2px rgba($color: #000000, $alpha: .2);
+        padding: 0px;
+        .img {
+            width: 100%;
+            height: 200px;
+            // overflow: hidden;
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
+            background-size: cover !important;
+            pointer-events: none;
+        }            
+        h4 {
+            font-weight: 400 !important;
+            font-size: 22px !important;
+            margin-bottom: 0 !important;
+            background-color: #38af48;
+            text-align: center;
+            padding: 5px;
+            color: #fff;
+        }
+        .content{ 
+            margin-top: 5px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 0px 5px 5px 5px;
+            p {
+                max-height: 60px;
+                height: 100%;
+                flex: 1 0;
+                width: 100%;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid rgba($color: #000000, $alpha: .2);
+            }
+            .row {
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                .price {
+                    order: 2;
+                    margin-top: 5px;
+                    // display: none;
+                    width: fit-content;
+                    height: 100%;
+                    display: inline;
+                    // flex-direction: column;
+                    // justify-content: space-between;
+                    button {
+                        max-width: 100%;
+                        font-size: 12px;
+                    }
+                    b {
+                        
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+                    p {
+                        border: none;
+                        padding-bottom: 0;
+                        margin-bottom: 0;
+                        color: rgba($color: #000000, $alpha: .5);
+                        font-size: 16px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                    }
+                }
+                a {
+                    margin-top: 3px;
+                    width: 100%;
+                    button {               
+                        width: 100%;
+                        cursor: pointer;
+                        outline: none;
+                        height: 100%;
+                        border: 1px solid #46af48;
+                        background: #fff;
+                        color: #46af48;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        
+                        padding: 12px;
+
+                        &:hover { 
+                            background: #46af48;
+                            color: #fff;
+                        }
+                    }
+                }
+                
+            }       
+        }
+}
+}
+
+@media screen and (max-width: 591px) {
+    .bodyItem {
+        max-width: 250px;
+        margin: 0 auto;
     }
+}

@@ -62,7 +62,7 @@ function CategoriesList() {
           {categories
             .sort((a, b) => (a.id > b.id ? 1 : -1))
             .map((i, index) => (
-              <div className={styles.itemWrapper}>
+              <div key={`category ${index}`} className={styles.itemWrapper}>
                 <div
                   onClick={() => handleSelectCategory(index, i)}
                   className={(categoryValue == index && styles.selected) + ' ' + styles.item}>
@@ -79,11 +79,14 @@ function CategoriesList() {
         <div className={styles.styles}>
           {categories[categoryValue] && categories[categoryValue].styles.length ? (
             categories[categoryValue].styles
-              .sort((a, b) => (a.id > b.id ? -1 : 1))
+              // .sort((a, b) => (a.id > b.id ? -1 : 1))
               .map((i) => (
-                <div className={styles.styleWrapper}>
+                <div key={`style ${i.id}`} className={styles.styleWrapper}>
                   <div className={styles.style}>{i.title}</div>
-                  <ChangeStyle thisStyle={i} />
+                  <ChangeStyle
+                    thisStyle={i}
+                    styleID={categories[categoryValue].styles.indexOf(i) + 1}
+                  />
                 </div>
               ))
           ) : (

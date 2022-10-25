@@ -35,7 +35,7 @@
                     width: 207px;
                     min-width: 100px;
                     min-height: 40px;
-                    outline: none;
+                    
                     -webkit-appearance: none;
                     font-family: Roboto, sans-serif;
                     color: #000000;
@@ -49,6 +49,9 @@
                     -webkit-border-radius: 250px;
                     -moz-border-radius: 250px;
                     border-radius: 250px;
+                    &:focus {
+                        outline: 2px solid grey;
+                    }
                     &::placeholder {
                         color: rgba($color: #000000, $alpha: .4);
                     }
@@ -73,6 +76,275 @@
                 a {
                     color: #ffffff;
                     font-size: 14px;
+                }
+            }
+        }
+    }
+}
+.error {
+    border: 1px solid red !important;
+}
+
+@media screen and (max-width: 1394px) {
+    .callform {
+        background: url(../../../public/images/d/6.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        .wrapper {
+            padding: 30px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(rgba(56, 175, 72, 0.94), rgba(56, 175, 72, 0.94));
+            .text {
+                min-width: fit-content;
+                .title{
+                    font-size: 60px;
+                    color: #fff;
+                    line-height: 1.1;
+                    font-weight: 700;
+                }
+                .subtitle {
+                    color: rgba(255, 255, 255, 0.6);
+                    font-size: 20px;
+                    margin-top: 3px;
+                }
+            }
+            .body {
+                margin-top: 30px;
+                padding-left: 30px;
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    input {
+                        margin-bottom: 10px;
+                        margin-right: 10px;
+                        padding: 2px 4px 2px 20px;
+                        border: none;
+                        box-sizing: border-box;
+                        background: #ffffff;
+                        width: 100%;
+                        min-width: 100px;
+                        min-height: 40px;
+                        outline: none;
+                        -webkit-appearance: none;
+                        font-family: Roboto, sans-serif;
+                        color: #000000;
+                        line-height: 1.2;
+                        letter-spacing: 0;
+                        text-align: start;
+                        text-transform: none;
+                        text-decoration: none;
+                        font-size: 14px;
+                        height: 40px;
+                        -webkit-border-radius: 250px;
+                        -moz-border-radius: 250px;
+                        border-radius: 250px;
+                        &::placeholder {
+                            color: rgba($color: #000000, $alpha: .4);
+                        }
+                    }
+                    button {
+                        cursor: pointer;
+                        width: 160px;
+                        height: 40px;
+                        border: none;
+                        outline: none;
+                        background: black;
+                        color: #fff;
+                        border-radius: 250px;
+                    }
+                }
+                .contract {
+                    margin-top: 10px;
+                    p {
+                        color: #fff;
+                        display: inline;
+                    }
+                    a {
+                        color: #ffffff;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .callform {
+        background: url(../../../public/images/d/6.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        .wrapper {
+            padding: 30px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(rgba(56, 175, 72, 0.94), rgba(56, 175, 72, 0.94));
+            .text {
+                min-width: fit-content;
+                .title{
+                    font-size: 60px;
+                    color: #fff;
+                    line-height: 1.1;
+                    font-weight: 700;
+                }
+                .subtitle {
+                    color: rgba(255, 255, 255, 0.6);
+                    font-size: 20px;
+                    margin-top: 3px;
+                }
+            }
+            .body {
+                margin-top: 30px;
+                padding-left: 0px;
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    input {
+                        margin-bottom: 10px;
+                        margin-right: 10px;
+                        padding: 2px 4px 2px 20px;
+                        border: none;
+                        box-sizing: border-box;
+                        background: #ffffff;
+                        width: 100%;
+                        min-width: 100px;
+                        min-height: 40px;
+                        outline: none;
+                        -webkit-appearance: none;
+                        font-family: Roboto, sans-serif;
+                        color: #000000;
+                        line-height: 1.2;
+                        letter-spacing: 0;
+                        text-align: start;
+                        text-transform: none;
+                        text-decoration: none;
+                        font-size: 14px;
+                        height: 40px;
+                        -webkit-border-radius: 250px;
+                        -moz-border-radius: 250px;
+                        border-radius: 250px;
+                        &::placeholder {
+                            color: rgba($color: #000000, $alpha: .4);
+                        }
+                    }
+                    button {
+                        cursor: pointer;
+                        width: 160px;
+                        height: 40px;
+                        border: none;
+                        outline: none;
+                        background: black;
+                        color: #fff;
+                        border-radius: 250px;
+                    }
+                }
+                .contract {
+                    margin-top: 10px;
+                    p {
+                        color: #fff;
+                        display: inline;
+                    }
+                    a {
+                        color: #ffffff;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 498px) {
+    .callform {
+        background: url(../../../public/images/d/6.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        .wrapper {
+            padding: 30px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(rgba(56, 175, 72, 0.94), rgba(56, 175, 72, 0.94));
+            .text {
+                min-width: fit-content;
+                .title{
+                    font-size: 35px;
+                    color: #fff;
+                    line-height: 1.1;
+                    font-weight: 700;
+                }
+                .subtitle {
+                    color: rgba(255, 255, 255, 0.6);
+                    font-size: 16px;
+                    margin-top: 3px;
+                }
+            }
+            .body {
+                margin-top: 30px;
+                padding-left: 0px;
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    input {
+                        margin-bottom: 10px;
+                        margin-right: 10px;
+                        padding: 2px 4px 2px 20px;
+                        border: none;
+                        box-sizing: border-box;
+                        background: #ffffff;
+                        width: 100%;
+                        min-width: 100px;
+                        min-height: 40px;
+                        outline: none;
+                        -webkit-appearance: none;
+                        font-family: Roboto, sans-serif;
+                        color: #000000;
+                        line-height: 1.2;
+                        letter-spacing: 0;
+                        text-align: start;
+                        text-transform: none;
+                        text-decoration: none;
+                        font-size: 14px;
+                        height: 40px;
+                        -webkit-border-radius: 250px;
+                        -moz-border-radius: 250px;
+                        border-radius: 250px;
+                        &::placeholder {
+                            color: rgba($color: #000000, $alpha: .4);
+                        }
+                    }
+                    button {
+                        cursor: pointer;
+                        width: 160px;
+                        height: 40px;
+                        border: none;
+                        outline: none;
+                        background: black;
+                        color: #fff;
+                        border-radius: 250px;
+                    }
+                }
+                .contract {
+                    margin-top: 10px;
+                    p {
+                        color: #fff;
+                        display: inline;
+                    }
+                    a {
+                        color: #ffffff;
+                        font-size: 14px;
+                    }
                 }
             }
         }

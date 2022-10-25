@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import CallForm from '../../Business/CallForm/CallForm';
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
@@ -12,6 +13,12 @@ function Reference() {
   };
   return (
     <>
+      <Helmet>
+        <meta name="robots" content="all" />
+        <title>Справочные материалы</title>
+        <meta name="description" content="Справочные материалы" />
+        <meta name="keywords" content="Справочные материалы" />
+      </Helmet>
       <Header imgHome={false} />
       <CallForm />
       <section className={styles.aboutUs}>

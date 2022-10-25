@@ -5,7 +5,6 @@ import styles from './AddStyle.module.scss';
 
 function AddStyle({ handleCloseAddStyle, thisCategoryId }) {
   const [newStyle, setNewStyle] = useState('');
-  console.log(thisCategoryId);
 
   const handleAddStyle = () => {
     if (newStyle !== '') {

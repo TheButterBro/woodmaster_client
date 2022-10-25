@@ -1,5 +1,11 @@
 import { $host } from './index';
 
+// EMAIL
+export const sendMail = async (body) => {
+  const { data } = await $host.post('api/email', body);
+  return data;
+};
+
 // АДМИН
 export const getPermisson = async (password) => {
   const { data } = await $host.post(`api/admin`, password);
@@ -42,7 +48,7 @@ export const fetchCategoriesList = async () => {
 };
 
 export const deleteCategory = async (category) => {
-  const { data } = await $host.delete('api/categories', category);
+  const { data } = await $host.delete(`api/categories/${category}`);
   return data;
 };
 export const putCategory = async (id, category) => {
@@ -60,8 +66,8 @@ export const fetchStyle = async () => {
   return data;
 };
 
-export const deleteStyle = async (style) => {
-  const { data } = await $host.delete('api/styles', style);
+export const deleteStyle = async (id, style) => {
+  const { data } = await $host.put(`api/styles/delete/${id}`, style);
   return data;
 };
 

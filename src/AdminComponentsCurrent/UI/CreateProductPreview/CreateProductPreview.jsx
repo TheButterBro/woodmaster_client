@@ -44,7 +44,7 @@ function CreateProductPreview({ previewItem }) {
           <ul className={styles.description}>
             {previewItem.description && previewItem.description.lenght
               ? previewItem.description.map((i) => (
-                  <li>
+                  <li key={`review ${i.number}`}>
                     <p>
                       <strong>{i.title}: </strong>
                       {i.text}

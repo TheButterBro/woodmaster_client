@@ -4,11 +4,26 @@ import styles from './Contacts.module.scss';
 import { YMaps, Map, Placemark, ZoomControl } from '@pbe/react-yandex-maps';
 import CallForm from '../../Business/CallForm/CallForm';
 import Footer from '../../Components/Footer/Footer';
+import { Helmet } from 'react-helmet';
+import { useEffect } from 'react';
+import { useState } from 'react';
 function Contacts() {
   // Map.behaviors.disable('scrollZoom');
   // Map.behaviors.disable('drag');
   return (
     <>
+      <Helmet>
+        <meta name="robots" content="all" />
+        <title>Контакты мебельной фабрики WoodMaster в Ульяновске</title>
+        <meta
+          name="description"
+          content="Телефон: +7 (927) 817-66-64, +7 (927) 805-46-89; Адрес: Ульяновск, Академика Сахара, д. 5"
+        />
+        <meta
+          name="keywords"
+          content="Контакты мебельной фабрики WoodMaster, адрес  мебельной фабрики WoodMaster, телефон мебельной фабрики WoodMaster"
+        />
+      </Helmet>
       <Header />
       <CallForm />
       <section className={styles.contacts}>
@@ -56,20 +71,24 @@ function Contacts() {
                 </div>
               </div>
             </div>
-            <YMaps>
-              <Map
-                placeMark={[54.335757, 48.471727]}
-                width={100 + '%'}
-                height={800}
-                defaultState={{ center: [54.335757, 48.471727], zoom: 15 }}>
-                <Placemark geometry={[54.335757, 48.471727]} />
-                <ZoomControl
-                  options={{
-                    float: 'right',
-                  }}
-                />
-              </Map>
-            </YMaps>
+            <div className={styles.mapwrapper}>
+              <div className={styles.mapcontent}>
+                <YMaps>
+                  <Map
+                    placeMark={[54.335757, 48.471727]}
+                    width={100 + '%'}
+                    height={100 + '%'}
+                    defaultState={{ center: [54.335757, 48.471727], zoom: 15 }}>
+                    <Placemark geometry={[54.335757, 48.471727]} properties={{}} />
+                    <ZoomControl
+                      options={{
+                        float: 'right',
+                      }}
+                    />
+                  </Map>
+                </YMaps>
+              </div>
+            </div>
           </div>
           <div className={styles.img}>
             <img src="/images/aboutUsRight_img.jpg" alt="" />

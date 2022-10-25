@@ -1,9 +1,18 @@
-import React, { useLayoutEffect } from 'react';
+import React from 'react';
 import styles from './Card.module.scss';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Card({ item }) {
-  console.log(item);
+  const getOrder = () => {
+    document.getElementById('order').scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    });
+    setTimeout(() => {
+      document.getElementById('focus-input').focus();
+    }, 1000);
+  };
+
   return (
     <div id="lol" className={styles.bodyItem}>
       <div
@@ -13,8 +22,8 @@ function Card({ item }) {
       <div className={styles.content}>
         <div className={styles.row}>
           <div className={styles.price}>
-            <p>цена</p>
-            <b>от {item.price} ₽</b>
+            <button onClick={getOrder}>Заказать дизайн</button>
+            {/* <b>от {item.price} ₽</b> */}
           </div>
           <Link to={'/catalog/product/' + item.id}>
             <button>Подробнее</button>

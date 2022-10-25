@@ -1,5 +1,5 @@
 import './App.scss';
-import Footer from './Components/Footer/Footer';
+import { Helmet } from 'react-helmet';
 import { useEffect, useState, useLayoutEffect } from 'react';
 import Home from './pages/Home/Home';
 import { BrowserRouter, Redirect, Routes, Route, useLocation } from 'react-router-dom';
@@ -12,6 +12,8 @@ import Contacts from './pages/Contacts/Contacts';
 import { fetchCategories, fetchCategoriesList, fetchProducts } from './http/productsAPI';
 import Adminpanel from './pages/Adminpanel/Adminpanel';
 import { createContext } from 'react';
+import Agreement from './pages/Agreement/Agreement';
+import SocialList from './Components/SocialList/SocialList';
 
 export const CatalogContext = createContext({});
 
@@ -52,6 +54,15 @@ function App() {
 
   return (
     <div className="App">
+      <Helmet>
+        <meta name="robots" content="all" />
+        <title>WoodMaster - Мебельная фабрика в Ульяновске</title>
+        <meta
+          name="description"
+          content="Наша компания «WoodMaster» уже долгое время специализируется на продаже качественной мебели и теперь мы можем с уверенностью заявить о том, что достигли высокой эффективности в нашей работе."
+        />
+        <meta name="keywords" content="Мебельная фабрика, купить мебель, продажа мебели" />
+      </Helmet>
       <BrowserRouter>
         <Wrapper />
         <CatalogContext.Provider
@@ -77,17 +88,22 @@ function App() {
                 />
               }
             />
-            {products.map((elem) => (
-              <Route path={'/catalog/product/' + elem.id} element={<Product item={elem} />} />
+            {products.map((elem, index) => (
+              <Route
+                key={`product card ${elem.id}`}
+                path={'/catalog/product/' + elem.id}
+                element={<Product item={elem} />}
+              />
             ))}
             <Route path="about-us" element={<AboutUs />} />
             <Route path="reference" element={<Reference />} />
             <Route path="bonuses" element={<Bonuses />} />
             <Route path="contacts" element={<Contacts />} />
-
+            <Route path="agreement" element={<Agreement />} />
             <Route path="adminpanel" element={<Adminpanel />} />
           </Routes>
         </CatalogContext.Provider>
+        <SocialList />
       </BrowserRouter>
     </div>
   );

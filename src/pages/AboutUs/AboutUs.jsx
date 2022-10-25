@@ -3,6 +3,7 @@ import styles from './AboutUs.module.scss';
 import CallForm from '../../Business/CallForm/CallForm';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
+import { Helmet } from 'react-helmet';
 
 function AboutUs() {
   const [isOpened, setIsOpened] = useState(false);
@@ -12,6 +13,15 @@ function AboutUs() {
   };
   return (
     <>
+      <Helmet>
+        <meta name="robots" content="all" />
+        <title>О мебельной фабрике WoodMaster в Ульяновске</title>
+        <meta
+          name="description"
+          content="Наша компания «WoodMaster» делает все необходимое, чтобы предоставить покупателям лучшую мебель, которая прослужит долгие годы."
+        />
+        <meta name="keywords" content="заказать мебель, где купить мебель,  мебель в Ульяновске" />
+      </Helmet>
       <Header imgHome={false} />
       <CallForm />
       <section className={styles.aboutUs}>

@@ -59,8 +59,6 @@ function ChangeProduct({ item, handleCloseChange, isOdd, setThisItem }) {
     formData.append('description', JSON.stringify(thisDescription));
     formData.append('oldDesc', JSON.stringify(item.description));
 
-    console.log(item.id, thisCategory, thisStyle, thisName, thisPrice, file, thisDescription);
-
     await putProduct(item.id, formData)
       .then(handleCloseChange())
       .then(
@@ -80,7 +78,7 @@ function ChangeProduct({ item, handleCloseChange, isOdd, setThisItem }) {
     handleCloseChange();
     sessionStorage.setItem('anch', null);
   };
-  console.log([...categories.filter((item) => item.id == thisCategory)]);
+
   return (
     <>
       <div className={styles.changeproduct}>
@@ -106,7 +104,7 @@ function ChangeProduct({ item, handleCloseChange, isOdd, setThisItem }) {
                   thisDescription
                     // .sort((a, b) => (a.id > b.id ? 1 : -1))
                     .map((i) => (
-                      <li>
+                      <li key={`description ${i.number}`}>
                         <span className={styles.titleSpan}>
                           <input
                             // defaultValue={i.title}
@@ -156,11 +154,15 @@ function ChangeProduct({ item, handleCloseChange, isOdd, setThisItem }) {
                   name="style"
                   id=""
                   className={styles.select + ' ' + (!isOdd && styles.odd)}>
-                  {[...categories.filter((item, index) => item.id == thisCategory)][0].styles
-                    .sort((a, b) => (a > b ? -1 : 1))
-                    .map((elem, index) => (
-                      <option value={index + 1}>{elem.title}</option>
-                    ))}
+                  {[...categories.filter((item, index) => item.id == thisCategory)][0] &&
+                    [...categories.filter((item, index) => item.id == thisCategory)][0].styles &&
+                    [...categories.filter((item, index) => item.id == thisCategory)][0].styles
+                      .sort((a, b) => (a > b ? -1 : 1))
+                      .map((elem, index) => (
+                        <option key={`option style ${elem.id}`} value={index + 1}>
+                          {elem.title}
+                        </option>
+                      ))}
                 </select>
               </div>
 

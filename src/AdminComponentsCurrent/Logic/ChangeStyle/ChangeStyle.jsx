@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
-import { putStyle } from '../../../http/productsAPI';
+import { deleteStyle, putStyle } from '../../../http/productsAPI';
 import styles from './ChangeStyle.module.scss';
 
-function ChangeStyle({ thisStyle }) {
+function ChangeStyle({ thisStyle, styleID }) {
   const [newStyle, setNewStyle] = useState('');
   const [isOpenedChangeStyle, setIsOpenedChangeStyle] = useState(false);
 
@@ -16,7 +16,6 @@ function ChangeStyle({ thisStyle }) {
   };
 
   //   ЛОГИКА ЗАПРОСА
-  console.log(thisStyle);
 
   const handleChangeStyle = () => {
     if (newStyle !== '') {
@@ -29,6 +28,12 @@ function ChangeStyle({ thisStyle }) {
     } else {
       alert('Поле названия не может быть пустым!');
     }
+  };
+  const handleDeleteCategory = () => {
+    const deleteData = new FormData();
+    deleteData.append('categoriesId', thisStyle.categoriesId);
+    deleteData.append('number', thisStyle.number);
+    deleteStyle(styleID, deleteData);
   };
 
   return (
@@ -53,6 +58,13 @@ function ChangeStyle({ thisStyle }) {
               <button onClick={handleChangeStyle} className={styles.button}>
                 Добавить
               </button>
+            </div>
+            <div className={styles.delete}>
+              <p>
+                Если вы удалите подкатегорию - товары, которые были в ней, перестанут отображаться,
+                пока вы не зададите им новую подкатегорию.
+              </p>
+              <button onClick={handleDeleteCategory}>Удалить</button>
             </div>
           </div>
         </div>

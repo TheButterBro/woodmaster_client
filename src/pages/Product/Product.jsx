@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useContext } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { CatalogContext } from '../../App';
 import CallForm from '../../Business/CallForm/CallForm';
@@ -16,6 +17,9 @@ function Product({ item }) {
       behavior: 'smooth',
       block: 'center',
     });
+    setTimeout(() => {
+      document.getElementById('focus-input').focus();
+    }, 1000);
   };
   useEffect(() => {
     setTimeout(() => {
@@ -27,9 +31,18 @@ function Product({ item }) {
   }, [item]);
 
   return (
-    <>
+    <div key={`catalog product ${item.id}`}>
+      <Helmet>
+        <meta name="robots" content="all" />
+        <title>Страница товара мебельной фабрики WoodMaster в Ульяновске</title>
+        <meta name="description" content="Товар мебельой фабрики, заказать товар" />
+        <meta
+          name="keywords"
+          content="заказать кухонных гарнитур, заказать шкаф-купе, заказать стул"
+        />
+      </Helmet>
       <Header imgHome={false} />
-      <div id="order">
+      <div>
         <CallForm />
       </div>
       <section className={styles.product}>
@@ -42,18 +55,26 @@ function Product({ item }) {
             </div>
             <div className={styles.content}>
               <div className={styles.text}>
-                <h1 className={styles.title}>{item.name}</h1>
-                <p className={styles.subtitle}>
-                  {thisCategories &&
-                    thisCategories.length &&
-                    thisCategories
-                      .filter((i) => i.id === item.categories)[0]
-                      .styles.map((elem) => elem.styleID === item.styleID && <p> {elem.title}</p>)}
-                </p>
+                <div className={styles.titles}>
+                  <h1 className={styles.title}>{item.name}</h1>
+                  <p className={styles.subtitle}>
+                    {thisCategories &&
+                      thisCategories.length &&
+                      thisCategories
+                        .filter((i) => i.id === item.categories)[0]
+                        .styles.map(
+                          (elem) =>
+                            elem.styleID === item.styleID && (
+                              <p key={`product styles ${elem.id}`}> {elem.title}</p>
+                            ),
+                        )}
+                  </p>
+                </div>
                 <div className={styles.description}>
                   {item.description && item.description.length ? (
                     item.description.map((elem, index) => (
                       <div
+                        key={`product desc ${elem.number}`}
                         style={{ background: index % 2 === 0 && 'lightgrey' }}
                         className={styles.descRow}>
                         <p className={styles.descTitle}>{elem.title}:</p>
@@ -69,11 +90,11 @@ function Product({ item }) {
                     <b>Цена</b>
                     <p>От {item.price} Р</p>
                   </div>
+                  <div className={styles.order}>
+                    <button onClick={getOrder}>Оставить заявку</button>
+                    {/* <p>Подберем индивидуальный дизайн любой сложности</p> */}
+                  </div>
                 </div>
-              </div>
-              <div className={styles.order}>
-                <button onClick={getOrder}>Оставить заявку</button>
-                {/* <p>Подберем индивидуальный дизайн любой сложности</p> */}
               </div>
             </div>
           </div>
@@ -81,7 +102,7 @@ function Product({ item }) {
       </section>
       <LikeProduct param={{ categories: item.categories, id: item.id }} />
       <Footer />
-    </>
+    </div>
   );
 }
 

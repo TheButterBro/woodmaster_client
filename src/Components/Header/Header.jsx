@@ -6,11 +6,9 @@ function Header({ imgHome }) {
   const [isOpened, setIsOpened] = useState(false);
   const handleOpenMenu = () => {
     setIsOpened(true);
-    document.body.classList.add('scrollHidden');
   };
   const handleCloseMenu = () => {
     setIsOpened(false);
-    document.body.classList.remove('scrollHidden');
   };
   return (
     <header>
@@ -19,7 +17,7 @@ function Header({ imgHome }) {
           <h1 className={styles.logo}>WoodMaster</h1>
           <b className={styles.who}>Мебельная фабрика</b>
           <div className={styles.splitter}></div>
-          <p className={styles.slogan}>Создаем персональные интерьеры</p>
+          <b className={styles.slogan}>Создаем персональные интерьеры</b>
           <div className={styles.contacts}>
             <div className={styles.phones}>
               <a href="tel:+7 (927) 805-46-89">+7 (927) 805-46-89</a>

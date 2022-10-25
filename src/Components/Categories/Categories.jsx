@@ -14,10 +14,10 @@ function Categories() {
           {categoriesList.map((elem) => (
             <li
               style={{ backgroundImage: `url(${process.env.REACT_APP_API_URL + elem.img})` }}
-              key={elem.id}>
+              key={`cateList ${elem.id}`}>
               <div className={styles.body}>
                 <h3>{elem.title}</h3>
-                <Link to="/catalog">
+                <Link to="/catalog" state={{ propsCatalog: elem.id }}>
                   <button>Подробнее</button>
                 </Link>
               </div>

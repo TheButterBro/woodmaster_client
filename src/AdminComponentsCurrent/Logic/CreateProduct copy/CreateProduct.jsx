@@ -63,21 +63,6 @@ function CreateProduct({ style, categories, handleCloseCreateProd }) {
       createProduct(formData).then((data) => handleCloseCreateProd());
     }
   };
-
-  // console.log(
-  //   'Категория: ',
-  //   thisCategory,
-  //   'Стиль: ',
-  //   thisStyle,
-  //   'Название: ',
-  //   thisName,
-  //   'Цена: ',
-  //   thisPrice,
-  //   'Изображение: ',
-  //   file,
-  //   'Описание: ',
-  //   thisDescription,
-  // );
   return (
     <div className={styles.createproduct}>
       <div className={styles.wrapper}>

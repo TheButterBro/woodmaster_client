@@ -1,6 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useContext } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import { CatalogContext } from '../../App';
 import CallForm from '../../Business/CallForm/CallForm';
 import Card from '../../Components/Card/Card';
@@ -53,6 +53,18 @@ function Catalog() {
 
   return (
     <>
+      <Helmet>
+        <meta name="robots" content="all" />
+        <title>Каталог мебельной фабрики WoodMaster в Ульяновске</title>
+        <meta
+          name="description"
+          content="Каталог мебельной фабрики WoodMaster: кухонные гарнитуры, шкаф-купе, спальни, столы, стулья, офисная мебель, кровати."
+        />
+        <meta
+          name="keywords"
+          content="заказать кухонных гарнитур, заказать шкаф-купе, заказать стул"
+        />
+      </Helmet>
       <Header imgHome={false} />
       <CallForm />
       <section className={styles.catalog}>
@@ -62,7 +74,7 @@ function Catalog() {
             <div ref={cateRef} className={styles.back}>
               <h3>Каталог</h3>
               {categoriesList.map((elem) => (
-                <div key={elem.id} className={styles.item}>
+                <div key={`catalog catelist ${elem.id}`} className={styles.item}>
                   <button
                     className={categoryValue === elem.id && styles.buttonActive}
                     onClick={() => handleSwitchCategory(elem.id)}>
@@ -90,7 +102,7 @@ function Catalog() {
                           product.styleID === elem.styleID &&
                           product.categories == elem.categoriesId,
                       ) && (
-                        <div className={styles.cate}>
+                        <div key={`catalog prod box ${elem.id}`} className={styles.cate}>
                           <h4>{elem.title}</h4>
                           <div className={styles.box}>
                             {products
@@ -100,7 +112,7 @@ function Catalog() {
                                   elem.styleID == item.styleID,
                               )
                               .map((elem) => (
-                                <Card key={elem.id} item={elem} />
+                                <Card key={`card ${elem.id}`} item={elem} />
                               ))}
                           </div>
                         </div>

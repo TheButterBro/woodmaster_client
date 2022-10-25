@@ -38,13 +38,11 @@ function Adminpanel() {
 
   useEffect(() => {
     async function checkValue() {
-      console.log(selectValue, products);
       if (Number(selectValue) === 0) {
         return fetchProducts().then((data) =>
           setProducts(data.sort((a, b) => (a.id > b.id ? 1 : -1))),
         );
       } else {
-        // console.log(products);
         return fetchProducts().then((data) =>
           setProducts([
             ...data
@@ -78,15 +76,12 @@ function Adminpanel() {
   useEffect(() => {
     fetchProducts().then((data) => setProducts(data));
     fetchCategories().then((data) => setCategories(data));
-    async function getFetch() {
-      // await axios
-      //   .get(`https://63086b3246372013f57cb1e1.mockapi.io/categories`)
-      //   .then((res) => setCategories(res.data));
-      await axios
-        .get('https://63086b3246372013f57cb1e1.mockapi.io/style')
-        .then((res) => setStyle(res.data));
-    }
-    getFetch();
+    // async function getFetch() {
+    //   await axios
+    //     .get('https://63086b3246372013f57cb1e1.mockapi.io/style')
+    //     .then((res) => setStyle(res.data));
+    // }
+    // getFetch();
   }, []);
 
   const handleOpenCreateProd = () => {
@@ -162,14 +157,16 @@ function Adminpanel() {
                       id="">
                       <option value={0}>Все категории</option>
                       {categories.map((elem) => (
-                        <option value={elem.id}>{elem.title}</option>
+                        <option key={`option adminpanel ${elem.number}`} value={elem.id}>
+                          {elem.title}
+                        </option>
                       ))}
                     </select>
                   </div>
-                  <div className={styles.search}>
+                  {/* <div className={styles.search}>
                     <p>Поиск по навзванию:</p>
                     <input type="text" />
-                  </div>
+                  </div> */}
                   <div className={styles.createprod}>
                     <button onClick={handleOpenCreateProd} className={styles.createprodButton}>
                       Создать новый товар

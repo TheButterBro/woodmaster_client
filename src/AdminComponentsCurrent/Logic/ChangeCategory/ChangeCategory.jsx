@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { putCategory } from '../../../http/productsAPI';
+import { putCategory, deleteCategory } from '../../../http/productsAPI';
 import styles from './ChangeCategory.module.scss';
 
 function ChangeCategory({ thisCategoryId }) {
@@ -22,7 +22,6 @@ function ChangeCategory({ thisCategoryId }) {
     let file = event.target.files[0];
     setFile(file);
   };
-  console.log(thisCategoryId);
 
   const handleChangeCategory = () => {
     if (file || newCategory !== '') {
@@ -34,6 +33,10 @@ function ChangeCategory({ thisCategoryId }) {
     } else {
       alert('Измените название И/ИЛИ изображение категории!');
     }
+  };
+
+  const handleDeleteCategory = () => {
+    deleteCategory(thisCategoryId.id);
   };
 
   return (
@@ -51,7 +54,7 @@ function ChangeCategory({ thisCategoryId }) {
               type="text"
               className={styles.input}
             />
-            <div className={styles.title}>Загрузите изображение для новой категории:</div>
+            <div className={styles.title}>Если хотите изменить изображение, загрузите его:</div>
             <input onChange={handlerFileChange} type="file" className={styles.input2} />
             <div className={styles.buttons}>
               <button onClick={handleCloseChangeCategory} className={styles.button}>
@@ -60,6 +63,13 @@ function ChangeCategory({ thisCategoryId }) {
               <button onClick={handleChangeCategory} className={styles.button}>
                 Добавить
               </button>
+            </div>
+            <div className={styles.delete}>
+              <p>
+                Если вы удалите категорию - товары, которые были в ней, перестанут отображаться,
+                пока вы не зададите им новую категорию.
+              </p>
+              <button onClick={handleDeleteCategory}>Удалить</button>
             </div>
           </div>
         </div>

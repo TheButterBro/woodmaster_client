@@ -1,122 +1,37 @@
-.aboutUs {
-    background-color: #1a1a1a;
+.agreement {
     .wrapper {
         display: flex;
+        width: 100%;
         height: 100%;
-        // padding: 10px 0;
+        justify-content: space-between;
+        align-items: center;
         .content {
-            flex: 1;
-            background-color: #fff;
-            padding: 60px 30px 60px 60px;
-            max-width: 60%;
-            transition: all .3s ease-in-out;
-            h3 {
+            padding: 60px;
+            h4 {
                 font-size: 30px;
-                font-weight: bold;
-                margin-bottom: 55px;
+                
             }
-            .text {
-                padding: 0px 24px;
-                strong {
-                    font-weight: 700;
-                    line-height: 1.5;
-                    font-size: 20px;
-                    margin-bottom: 20px;
-                    display: block;
-                }
-                p {
-                    line-height: 1.5;
-                    font-size: 20px;
-                    font-weight: 400;
-                    margin-bottom: 20px;
-                }
-            }
-            .table {
-
-                .tbody {
-                    margin-bottom: 30px;
-                    border: 1px solid #dedede;
-                    border-collapse: collapse;
-                    .title {
-                        text-align: center;
-                        padding: 7px;
-                        background: #38af48;
-                        color: #fff;
-                        font-size: 20px;
-                    }
-                    tr {
-                        border: 1px solid #dedede;
-                        border-collapse: collapse;
-                        .strong {
-                            text-align: center;
-                            font-weight: 700;
-                        }
-                        td {
-                            padding: 7px;
-                            border-collapse: collapse;
-                            border: 1px solid #dedede;
-                            font-size: 20px;
-                        }
-                    }
-                }
+            p {
+                margin-top: 25px;
+                font-size: 15px;
+                line-height: 1.5;
             }
         }
-        .images, .imagesActive {
-            width: fit-content;
-            max-width: 40%;
-            position: sticky;
-            top: 0;
-            transition: all .3s ease-in-out;
-            // transform: translate(0, -50%);
-            // margin: auto;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #1a1a1a;
-            overflow: hidden;
-
+        .images {
+            // max-width: 40%;
+            // width: fit-content;
+            height: 500px;
             img {
                 height: 100%;
                 // max-width: none;
                 // transform: translate(-70px);
             }
-            .back {
-                cursor: pointer;
-                position: absolute;
-                top: 0;
-                left: 0;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                height: 100vh;
-                width: 60px;
-                background: rgba($color: #000000, $alpha: .2);
-                img {
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50px;
-                    padding: 7px;
-                    transition: all .3s ease-in-out;
-                    transform: rotate(-90deg);
-                    background: #fff;
-                    display: inline;
-                }
-                .rotate {
-                    transform: rotate(90deg);
-                }
-            }
-        }
-        .imagesActive {
-            max-width: 80%;
         }
     }
 }
 
 @media screen and (max-width: 1394px) {
-    .aboutUs {
+    .agreement {
         background-color: #1a1a1a;
         .wrapper {
             display: flex;
@@ -236,7 +151,7 @@
 }
 
 @media screen and (max-width: 1394px) {
-    .aboutUs {
+    .agreement {
         .wrapper {
             .content {
                 padding: 50px 30px;
@@ -245,7 +160,7 @@
     }
 }
 @media screen and (max-width: 1025px) {
-    .aboutUs {
+    .agreement {
         .wrapper {
             .content {
                 padding: 50px 30px;
@@ -291,7 +206,7 @@
     }
 }
 @media screen and (max-width: 599px) {
-    .aboutUs {
+    .agreement {
         .wrapper {
             .content {
                 padding: 50px 30px;
@@ -338,7 +253,7 @@
     }
 }
 @media screen and (max-width: 360px) {
-    .aboutUs {
+    .agreement {
         .wrapper {
             .content {
                 padding: 50px 30px;

@@ -52,7 +52,7 @@ function ProductItem({ item, index, thisCategory, thisStyle }) {
   };
 
   return (
-    <>
+    <div key={`productItem item ${index}`}>
       <DeleteProduct
         handleCloseDelete={handleCloseDelete}
         handleDeleteProduct={handleDeleteProduct}
@@ -75,7 +75,7 @@ function ProductItem({ item, index, thisCategory, thisStyle }) {
                 thisItem.description
                   // .sort((a, b) => (a.id > b.id ? 1 : -1))
                   .map((i) => (
-                    <li>
+                    <li key={`productItem ${i.number}`}>
                       <span className={styles.titleSpan}>
                         <strong>{i.title}</strong>
                         {/* <strong>:</strong> */}
@@ -117,7 +117,7 @@ function ProductItem({ item, index, thisCategory, thisStyle }) {
           />
         )}
       </div>
-    </>
+    </div>
   );
 }
 
