@@ -7,6 +7,11 @@ export const sendMail = async (body) => {
 };
 
 // АДМИН
+export const createPermission = async (password) => {
+  const { data } = await $host.put(`api/admin`, password);
+  return data;
+};
+
 export const getPermisson = async (password) => {
   const { data } = await $host.post(`api/admin`, password);
   return data;

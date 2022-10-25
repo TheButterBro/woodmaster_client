@@ -3,6 +3,7 @@ import { useState } from 'react';
 import CallForm from '../../Business/CallForm/CallForm';
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
+import { createPermission } from '../../http/productsAPI';
 import styles from './Agreement.module.scss';
 
 function Agreement() {
@@ -10,6 +11,15 @@ function Agreement() {
 
   const handleOpenImage = () => {
     setIsOpened(!isOpened);
+  };
+
+  const handleCreatePass = () => {
+    let formData = new FormData();
+
+    formData.append('password', 'URAauNJWOZ');
+    formData.append('createdAt', '2022-10-26 00:00:00+04');
+    formData.append('updatedAt', '2022-10-26 00:00:00+04');
+    createPermission(formData);
   };
   return (
     <>
@@ -45,6 +55,7 @@ function Agreement() {
             <img src="/images/aboutUsRight_img.jpg" alt="" />
           </div>
         </div>
+        <button onClick={handleCreatePass}>Создать</button>
       </section>
       <Footer />
     </>
