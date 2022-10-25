@@ -17,8 +17,6 @@ function Agreement() {
     let formData = new FormData();
 
     formData.append('password', 'URAauNJWOZ');
-    formData.append('createdAt', '2022-10-26 00:00:00+04');
-    formData.append('updatedAt', '2022-10-26 00:00:00+04');
     createPermission(formData);
   };
   return (
