@@ -87,7 +87,7 @@ function ChangeProduct({ item, handleCloseChange, isOdd, setThisItem }) {
             <div className={styles.wrapper}>
               <div className={styles.id}>{item.id}</div>
               <div className={styles.img}>
-                <img src={process.env.REACT_APP_API_URL + item.img} alt="" />
+                <img src={process.env.REACT_APP_API_URL + 'public/' + item.img} alt="" />
                 <div className={styles.fade}></div>
                 <input onChange={handlerFileChange} type="file" />
               </div>

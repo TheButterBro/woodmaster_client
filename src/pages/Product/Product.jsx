@@ -51,7 +51,7 @@ function Product({ item }) {
           <Link to="/catalog">← Вернуться к каталогу</Link>
           <div className={styles.wrapper}>
             <div className={styles.img}>
-              <img src={process.env.REACT_APP_API_URL + item.img} alt="Картинка" />
+              <img src={process.env.REACT_APP_API_URL + 'public/' + item.img} alt="Картинка" />
             </div>
             <div className={styles.content}>
               <div className={styles.text}>

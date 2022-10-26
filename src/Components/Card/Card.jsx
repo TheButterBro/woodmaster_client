@@ -16,7 +16,7 @@ function Card({ item }) {
   return (
     <div id="lol" className={styles.bodyItem}>
       <div
-        style={{ background: `url(${process.env.REACT_APP_API_URL + item.img})` }}
+        style={{ background: `url(${process.env.REACT_APP_API_URL + 'public/' + item.img})` }}
         className={styles.img}></div>{' '}
       <h4>{item.name}</h4>
       <div className={styles.content}>

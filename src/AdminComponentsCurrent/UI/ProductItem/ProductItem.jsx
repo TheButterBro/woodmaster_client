@@ -67,7 +67,7 @@ function ProductItem({ item, index, thisCategory, thisStyle }) {
             className={styles.wrapper}>
             <p className={styles.id}>{thisItem.id}</p>
             <div className={styles.img}>
-              <img src={process.env.REACT_APP_API_URL + thisItem.img} alt="" />
+              <img src={process.env.REACT_APP_API_URL + 'public/' + thisItem.img} alt="" />
             </div>
             <p className={styles.name}>{thisItem.name}</p>
             <ul className={styles.description}>

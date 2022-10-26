@@ -139,7 +139,9 @@ function Adminpanel() {
                     <strong>Дата входа:</strong> {getCurrentDate()}
                   </p>
 
-                  <button className={styles.leave}>Вернуться в магазин</button>
+                  <link to="/">
+                    <button className={styles.leave}>Вернуться в магазин</button>
+                  </link>
                 </div>
               </div>
               <div className={styles.body}>

@@ -13,7 +13,9 @@ function Categories() {
         <ul>
           {categoriesList.map((elem) => (
             <li
-              style={{ backgroundImage: `url(${process.env.REACT_APP_API_URL + elem.img})` }}
+              style={{
+                backgroundImage: `url(${process.env.REACT_APP_API_URL + 'public/' + elem.img})`,
+              }}
               key={`cateList ${elem.id}`}>
               <div className={styles.body}>
                 <h3>{elem.title}</h3>
