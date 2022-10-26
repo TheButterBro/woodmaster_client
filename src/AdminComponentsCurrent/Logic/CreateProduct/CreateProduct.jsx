@@ -122,13 +122,16 @@ function CreateProduct({ handleCloseCreateProd }) {
                   name="style"
                   id=""
                   className={styles.select}>
-                  {[...categories.filter((item) => item.id == thisCategory)][0].styles.map(
-                    (elem, index) => (
-                      <option key={`option style create ${elem.id}`} value={index + 1}>
-                        {elem.title}
-                      </option>
-                    ),
-                  )}
+                  {[...categories.filter((item) => item.id == thisCategory)] &&
+                    [...categories.filter((item) => item.id == thisCategory)][0] &&
+                    [...categories.filter((item) => item.id == thisCategory)][0].styles &&
+                    [...categories.filter((item) => item.id == thisCategory)][0].styles.map(
+                      (elem, index) => (
+                        <option key={`option style create ${elem.id}`} value={index + 1}>
+                          {elem.title}
+                        </option>
+                      ),
+                    )}
                 </select>
               </div>
               <div className={thisName !== '' ? styles.name : styles.name + ' ' + styles.error}>
