@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-// import ProductContainer from '../../AdminComponents/ProductContainer/ProductContainer';
 import styles from './Adminpanel.module.scss';
 import ProductList from '../../AdminComponentsCurrent/UI/ProductList/ProductList';
 import CreateProduct from '../../AdminComponentsCurrent/Logic/CreateProduct/CreateProduct';
@@ -138,10 +138,9 @@ function Adminpanel() {
                   <p>
                     <strong>Дата входа:</strong> {getCurrentDate()}
                   </p>
-
-                  <link to="/">
+                  <Link to="/">
                     <button className={styles.leave}>Вернуться в магазин</button>
-                  </link>
+                  </Link>
                 </div>
               </div>
               <div className={styles.body}>
