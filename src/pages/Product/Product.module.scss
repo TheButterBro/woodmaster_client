@@ -50,7 +50,7 @@
                         font-size: 18px;
                         // background: lightgray;
                         width: 100%;
-
+                        border-bottom: 2px solid #46af48;
                         
                         .descRow {
                             display: flex;
@@ -65,11 +65,14 @@
                     .row {
                         max-width: 70%;
                         display: flex;
-                        flex-direction: column;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
                         padding-top: 20px;
                         margin-bottom: 0px;
+                       
                         .price {
-                            margin-right: 40px;
+                            // margin-right: 40px;
                             display: flex;
                             flex-direction: column;
                             justify-content: space-between;
@@ -79,12 +82,14 @@
                                 color: rgba($color: #000000, $alpha: .5);
                             }
                             p {
-                                font-size: 20px;
+                                font-size: 16px;
+                                color: rgba($color: #000000, $alpha: 0.6);
+                                text-decoration: underline;
                             }
                         }
                         .order {
                             // flex: 1;
-                            margin-top: 30px;
+                            // margin-top: 30px;
                             // display: flex;
                             align-items: center;
                             button {
@@ -95,7 +100,7 @@
                                 outline: none;
                                 font-size: 20px;
                                 padding: 15px 20px;
-                                
+                                white-space: nowrap;
                             }
                             p {
                                 color: rgba($color: #000000, $alpha: .8);
@@ -177,15 +182,19 @@
                             flex-direction: row;
                             justify-content: flex-end;
                             max-width: 100%;
+                            column-gap: 50px;
                             .price {
+                                
                                 b {
                                 }
                                 p {
+                                    height: 100%;
                                 }
                             }
                             .order {
                                 margin-top: 0;
                                 button {
+                                    white-space: nowrap;
                                 }
                                 p {
                                 }
@@ -256,20 +265,28 @@
                             }
                         }
                         .row {
-                            flex-direction: row;
-                            justify-content: flex-end;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            align-items: center;
                             max-width: 100%;
+                            
                             .price {
+                                margin-top: 10px;
+                                order: 2;
+                                width: fit-content;
                                 b {
                                     font-size: 16px;
                                 }
                                 p {
-                                    font-size: 16px;
+                                    width: fit-content;
+                                    font-size: 12px;
                                 }
                             }
                             .order {
+                                width: 100%;
                                 margin-top: 0;
                                 button {
+                                    width: 100%;
                                     font-size: 16px;
                                 }
                                 p {
@@ -340,20 +357,21 @@
                             }
                         }
                         .row {
-                            flex-direction: row;
-                            justify-content: flex-end;
+                            padding-top: 0;
                             max-width: 100%;
                             .price {
                                 b {
                                     font-size: 14px;
                                 }
                                 p {
-                                    font-size: 14px;
+                                    font-size: 12px;
                                 }
                             }
                             .order {
+                                width: 100%;
                                 margin-top: 0;
                                 button {
+                                    width: 100%;
                                     font-size: 14px;
                                     padding: 10px 10px;
                                 }

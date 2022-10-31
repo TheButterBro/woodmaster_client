@@ -87,8 +87,9 @@ function Product({ item }) {
                 </div>
                 <div className={styles.row}>
                   <div className={styles.price}>
-                    <b>Цена</b>
-                    <p>От {item.price} Р</p>
+                    {/* <b>Цена</b>
+                    <p>От {item.price} Р</p> */}
+                    <p>Оставьте заявку и мы подберем для Вас уникальный дизайн!</p>
                   </div>
                   <div className={styles.order}>
                     <button onClick={getOrder}>Оставить заявку</button>
